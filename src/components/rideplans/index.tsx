@@ -14,10 +14,9 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   color: black;
-  position: absolute;
   margin-left: 25px;
   top: 159px;
-  z-index: 2;
+  margin-top: 20px;
 `;
 
 const ContainerRow = styled.div`
@@ -73,7 +72,25 @@ const Price = styled.div`
   color: #00b14f;
 `;
 
-export default function RidePlans() {
+export interface Props {
+  source: string;
+  dest: string;
+  cost: number;
+  schedule: string;
+  vehicle: string;
+  distance: number;
+  duration: number;
+}
+
+export default function RidePlans({
+  source,
+  dest,
+  cost,
+  schedule,
+  vehicle,
+  distance,
+  duration
+}: Props) {
   return (
     <CardContainer>
       <ContainerRow>
@@ -81,8 +98,8 @@ export default function RidePlans() {
         <Pinpoint src={pinpoint} alt='pinpoint' />
         <ContainerColumn>
           <Place>
-            <h4>Tempat asal</h4>
-            <h4>Tempat tujuan</h4>
+            <h4>{source}</h4>
+            <h4>{dest}</h4>
           </Place>
         </ContainerColumn>
       </ContainerRow>
@@ -92,17 +109,19 @@ export default function RidePlans() {
       <ContainerRow>
         <ClockIcon src={clockicon} alt='clockicon' />
         <Time>
-          <h4>10 mins • 1.7 km</h4>
+          <h4>
+            {duration} mins • {distance} km
+          </h4>
         </Time>
       </ContainerRow>
 
       <ContainerRow>
         <Depart>
           <h3>
-            Depart on <b>8.22</b>
+            Depart on <b>{schedule}</b>
           </h3>
         </Depart>
-        <Price>Rp15.000</Price>
+        <Price>Rp{cost}</Price>
       </ContainerRow>
     </CardContainer>
   );
