@@ -3,9 +3,18 @@ import styled from 'styled-components';
 import Button from 'components/button';
 import { Link } from 'react-router-dom';
 import accountBg from 'images/account.png';
+import businessButton from 'images/business-button.png';
 
 const Test = styled.div`
   text-align: center;
+`;
+
+const Business = styled.img`
+  width: 200px;
+  height: auto;
+  margin: 80px 112px;
+  position: absolute;
+  z-index: 2;
 `;
 
 const Screen = styled.img`
@@ -15,10 +24,22 @@ const Screen = styled.img`
   margin: auto;
 `;
 
+const ScreenContainer = styled.div`
+  width: 360px;
+  height: 640px;
+  display: block;
+  margin: auto;
+`;
+
 export default function Page() {
   return (
     <>
-      <Screen src={accountBg} alt='accountBg'></Screen>
+      <ScreenContainer>
+        <Link to='/add-business'>
+          <Business src={businessButton} alt='businessButton'></Business>
+        </Link>
+        <Screen src={accountBg} alt='accountBg'></Screen>
+      </ScreenContainer>
       <Test>
         Account
         <br />
