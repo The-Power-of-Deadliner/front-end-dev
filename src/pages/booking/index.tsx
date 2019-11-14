@@ -11,13 +11,13 @@ export default function Page() {
   return (
     <>
       <Test>
-        Login
+        Booking
         <br />
-        <Link to='/verif'>
-          <Button buttonText='Go to verif' />
+        <Link to='/payment'>
+          <Button buttonText='Go to payment' />
         </Link>
-        <Link to='/all-routes'>
-          <Button buttonText='Go to all-routes' />
+        <Link to='/loading'>
+          <Button buttonText='Go to loading' />
         </Link>
       </Test>
     </>

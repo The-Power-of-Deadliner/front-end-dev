@@ -11,10 +11,13 @@ export default function Page() {
   return (
     <>
       <Test>
-        Test
+        Home
         <br />
-        <Link to='/login'>
-          <Button buttonText='Go to login' />
+        <Link to='/account'>
+          <Button buttonText='Go to account' />
+        </Link>
+        <Link to='/recommend'>
+          <Button buttonText='Go to recommend' />
         </Link>
       </Test>
     </>
