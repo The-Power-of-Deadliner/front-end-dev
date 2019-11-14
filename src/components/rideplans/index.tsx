@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import grabcaricon from 'images/grabcar-icon.png';
-import grabbikeicon from 'images/grabbike-icon.png';
-import grabdeliveryicon from 'images/grabdelivery-icon.png';
 import pinpoint from 'images/pinpoint.png';
 import clockicon from 'images/clock-icon.png';
 
@@ -17,6 +15,13 @@ const CardContainer = styled.div`
   flex-direction: column;
   color: black;
 
+  position: absolute;
+	width: 80%;
+	left: 18px;
+	top: 159px;
+  z-index: 2;
+  
+
 `;
 
 const ContainerRow = styled.div`
@@ -29,13 +34,6 @@ const ContainerColumn = styled.div`
     flex-direction: column;
 `;
 
-const RowContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  background: #181818;
-  margin: 20px;
-`;
-
 const LineDivider = styled.div`
   margin-top: 12px;
   margin-bottom: 12px;
@@ -45,17 +43,32 @@ const LineDivider = styled.div`
   border: 1px solid #E0E0E0;
 `;
 
-export interface Props {
-  buttonText: string;
-}
+const GrabIcon = styled.img`
+	width: 64px;
+	height: 64px;
+`;
 
+const Pinpoint = styled.img`
+	width: 10%;
+`;
+
+const ClockIcon = styled.img`
+	width: 7%;
+`;
+
+const h3Green = styled.h3`
+	color: ##00B14D;
+	font-weight: bold;
+	text-align: right;
+	margin-right: 50px;
+`;
 
 export default function RidePlans() {
   return (
     <CardContainer>
       <ContainerRow>
-        <img src={grabcaricon} alt='grabcaricon'></img>
-        <img src={pinpoint} alt='pinpoint'></img>
+        <GrabIcon src={grabcaricon} alt='grabcaricon'/>
+        <Pinpoint src={pinpoint} alt='pinpoint'/>
         <ContainerColumn>
         <h4>Tempat asal</h4>
         <h4>Tempat tujuan</h4>
@@ -65,15 +78,13 @@ export default function RidePlans() {
       <LineDivider></LineDivider> 
 
       <ContainerRow>
-        <img src={clockicon} alt='clockicon'></img>
-        <h4>10 mins</h4>
-        <h4>• 1.7 km</h4>
-
+        <ClockIcon src={clockicon} alt='clockicon'/>
+        <h4>10 mins • 1.7 km</h4>
       </ContainerRow>
 
       <ContainerRow>
         <h3>Depart on <b>8.22</b></h3>
-        <h3><b>Rp15.000</b></h3>
+        <h3>Rp15.000</h3>
       </ContainerRow>
 
     </CardContainer>
