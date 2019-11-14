@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from 'components/button';
+import RidePlans from 'components/rideplans'
 import { Link } from 'react-router-dom';
 import recommendBg from 'images/recommend.png';
 
@@ -25,6 +26,9 @@ export default function Page() {
         <Link to='/'>
           <Button buttonText='Go to home' />
         </Link>
+
+        <RidePlans/>
+        
       </Test>
     </>
   );
