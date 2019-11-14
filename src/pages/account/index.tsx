@@ -10,7 +10,7 @@ const Test = styled.div`
 `;
 
 const Business = styled.img`
-  width: 22vh;
+  width: 200px;
   height: auto;
   margin: 9vh 12.5vh;
   position: absolute;
