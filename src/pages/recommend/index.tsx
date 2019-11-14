@@ -85,8 +85,8 @@ class Page extends Component<{}, PageState> {
           cost={data.cost}
           schedule={data.schedule}
           vehicle={data.vehicle}
-          distance={data.distance}
-          duration={data.duration}
+          distance={data.distance / 1000}
+          duration={Math.floor(data.duration / 60)}
           key={i}
         />
       );
