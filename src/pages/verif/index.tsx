@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from 'components/button';
+import TransButton from 'components/button-trans';
 import { Link } from 'react-router-dom';
 import verifBg from 'images/verif.png';
 
@@ -15,10 +16,22 @@ const Screen = styled.img`
   margin: auto;
 `;
 
+const ScreenContainer = styled.div`
+  width: 360px;
+  height: 640px;
+  display: block;
+  margin: auto;
+`;
+
 export default function Page() {
   return (
     <>
-      <Screen src={verifBg} alt='verifBg'></Screen>
+      <ScreenContainer>
+        <Link to='/home'>
+          <TransButton />
+        </Link>
+        <Screen src={verifBg} alt='verifBg'></Screen>
+      </ScreenContainer>
       <Test>
         Verif
         <br />
