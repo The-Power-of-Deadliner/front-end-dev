@@ -5,6 +5,10 @@ const DefaultButton = styled.button`
   color: #00b14d;
 `;
 
-export default function Page() {
-  return <DefaultButton>Test Button</DefaultButton>;
+export interface Props {
+  buttonText: string;
+}
+
+export default function Page({ buttonText }: Props) {
+  return <DefaultButton>{buttonText}</DefaultButton>;
 }

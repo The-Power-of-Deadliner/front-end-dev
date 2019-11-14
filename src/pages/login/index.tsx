@@ -13,8 +13,8 @@ export default function Page() {
       <Test>
         Test
         <br />
-        <Link to='/login'>
-          <Button buttonText='Go to login' />
+        <Link to='/'>
+          <Button buttonText='Go to home' />
         </Link>
       </Test>
     </>
