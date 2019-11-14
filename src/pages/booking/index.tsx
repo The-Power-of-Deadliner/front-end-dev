@@ -25,7 +25,12 @@ const ScreenContainer = styled.div`
 
 const Payment = styled.div`
   position: absolute;
-  margin: 58vh 1vh;
+  margin: 522px 9px;
+`;
+
+const Loading = styled.div`
+  position: absolute;
+  margin: 575px 155px;
 `;
 
 export default function Page() {
@@ -37,6 +42,11 @@ export default function Page() {
             <ShapeButton />
           </Link>
         </Payment>
+        <Loading>
+          <Link to='/loading'>
+            <ShapeButton />
+          </Link>
+        </Loading>
         <Screen src={bookingBg} alt='bookingBg'></Screen>
       </ScreenContainer>
       <Test>

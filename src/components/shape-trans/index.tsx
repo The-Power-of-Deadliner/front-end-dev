@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ShapeButton = styled.button`
-  background-color: red;
+  background-color: Transparent;
   border: none;
   cursor: pointer;
   outline: none;
