@@ -11,3 +11,61 @@ body {
   background-color: black;
   height: 100%;
 }
+
+h1 {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 20px;
+	/* or 100% */
+	text-align: center;
+}
+
+h2 {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+h3 {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+h4 {
+
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+h5 {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 28px;
+	/* or 215% */
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+p {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 20px;
+	/* or 167% */
+
+	/* Gray 3 */
+	color: #828282;
+}
