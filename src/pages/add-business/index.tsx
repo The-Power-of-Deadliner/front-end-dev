@@ -24,31 +24,31 @@ const ScreenContainer = styled.div`
 `;
 
 const LineDivider = styled.div`
-  left: 4%;
-  right: 4%;
+  left: 36px;
+  right: 36px;
   width: 100%;
   border: 1px solid #e0e0e0;
-  margin: 1vh 0;
+  margin: 9px 0;
 `;
 
 const TextContainer = styled.div`
-  margin: 10vh 3vh;
+  margin: 90px 27px;
   position: absolute;
   z-index: 2;
 `;
 
 const Title = styled.div`
   font-weight: 600;
-  font-size: 1.6vh;
+  font-size: 14px;
   color: #00afd3;
-  margin-top: 3vh;
-  margin-bottom: 0.5vh;
+  margin-top: 27px;
+  margin-bottom: 5px;
 `;
 
 const Arrow = styled.img`
-  width: 2vh;
+  width: 18px;
   height: auto;
-  margin: 18.5vh 34vh;
+  margin: 167px 306px;
   position: absolute;
   z-index: 2;
 `;

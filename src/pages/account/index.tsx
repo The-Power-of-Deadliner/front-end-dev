@@ -12,7 +12,7 @@ const Test = styled.div`
 const Business = styled.img`
   width: 200px;
   height: auto;
-  margin: 9vh 12.5vh;
+  margin: 80px 112px;
   position: absolute;
   z-index: 2;
 `;
