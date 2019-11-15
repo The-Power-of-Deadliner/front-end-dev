@@ -4,6 +4,7 @@ import Button from 'components/button';
 import TransButton from 'components/button-trans';
 import { Link } from 'react-router-dom';
 import reportBg from 'images/report.png';
+import piggyBank from 'images/piggy-bank-icon.png';
 
 const Test = styled.div`
   text-align: center;
@@ -23,10 +24,74 @@ const ScreenContainer = styled.div`
   margin: auto;
 `;
 
+const TextContainer = styled.div`
+  position: absolute;
+  width: 340px;
+  height: 22px;
+  left: 22px;
+  top: 485px;
+  z-index: 2;
+`;
+const ContainerRow = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const PiggyBank = styled.img`
+  width: 44px;
+  height: 44px;
+  margin-right: 16px;
+  margin-top: 12px;
+`;
+
+const LongButton = styled.button`
+  background: #00b14d;
+  color: white;
+  position: absolute;
+  width: 328px;
+  height: 43px;
+  left: 16px;
+  top: 586px;
+  font-size: 2.76vh;
+  padding: 0.25em 1em;
+  border-radius: 5px;
+`;
+
+const SavedContainer = styled.div`
+  position: absolute;
+`;
+
+const SavedText = styled.div`
+  margin-top: 10px;
+`;
+
 export default function Page() {
   return (
     <>
       <ScreenContainer>
+        <SavedContainer>
+          <TextContainer>
+            <ContainerRow>
+              <div>
+                <PiggyBank src={piggyBank} alt='piggyBank' />
+              </div>
+              <div>
+                <h4>
+                  Amount saved in this trip <b>Rp10.000</b>
+                </h4>
+                <SavedText>
+                  <div>
+                    <h4>
+                      Prediction of total saved cost <b>Rp400.000</b>
+                    </h4>
+                    <p>(For November 2019 only)</p>
+                  </div>
+                </SavedText>
+              </div>
+            </ContainerRow>
+          </TextContainer>
+          <LongButton>Submit</LongButton>
+        </SavedContainer>
         <Link to='/home'>
           <TransButton />
         </Link>
